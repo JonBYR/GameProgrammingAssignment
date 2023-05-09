@@ -1,0 +1,7 @@
+D:\C++\SDLPractise\GameCreation\Debug\GameCreation.exe
+D:\C++\SDLPractise\GameCreation\Debug\GameCreation.pdb
+C:\Users\Computing\source\repos\SDLPractise\GameCreation\Debug\GameCreation.exe
+C:\Users\Computing\source\SDLPractiseText\SDLPractise\GameCreation\Debug\GameCreation.exe
+C:\Users\Computing\source\repos\SDLPractiseText\SDLPractise\GameCreation\Debug\GameCreation.exe
+C:\Users\User\source\repos\SDLPractise\GameCreation\Debug\GameCreation.exe
+C:\Users\Computing\source\repos\Game\GameCreation\Debug\GameCreation.exe
