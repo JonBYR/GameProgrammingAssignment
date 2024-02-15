@@ -3,7 +3,7 @@
 #include "SDL.h"
 #include "SDL_image.h"
 #include "SDL_ttf.h"
-#include "SDL_mixer.h"
+//#include "SDL_mixer.h"
 #include "GameObject.h"
 #include "Player.h"
 #include "Enemy.h"
@@ -56,7 +56,7 @@ private:
 	int fontSize;
 	bool mute;
 	bool frogCollected;
-	Mix_Music* backingMusic;
+	//Mix_Music* backingMusic;
 	int volume;
 	bool timerExtended;
 	std::ifstream frogs;

@@ -17,7 +17,7 @@ void Squares::Init(int eY, int eX, float eDirX, float eDirY, int eNum)
 		Add(PosX, PosY, i);
 	}
 	LogTime::getTime(logMessage, 32);
-	if (Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096) == -1)
+	/*if (Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096) == -1)
 	{
 		printf("Warning: Audio has not been found! \n");
 		SDL_Quit();
@@ -26,7 +26,7 @@ void Squares::Init(int eY, int eX, float eDirX, float eDirY, int eNum)
 	{
 		GOOD_FROG = Mix_LoadWAV("./content/GoodFrog.wav");
 		BAD_FROG = Mix_LoadWAV("./content/BadFrog.wav");
-	}
+	}*/
 	startVol = 128;
 	setMix(audio);
 }
@@ -63,10 +63,12 @@ void Squares::Update(SDL_Rect* playerRect)
 		{
 			SDL_Log("[%s] [PLAYER HAS COLLIDED WITH FROG %i] [%i]", logMessage, sprites[i]->getNumber() + 1, SDL_GetTicks());
 			LogTime::write("PLAYER HAS COLLIDED WITH FROG", SDL_GetTicks(), sprites[i]->getNumber() + 1, logMessage);
-			if ((sprites[i]->getNumber() % 2) == 0) { Mix_PlayChannel(-1, GOOD_FROG, 0); extraScore = 2; collision = true; }
+			if ((sprites[i]->getNumber() % 2) == 0) { //Mix_PlayChannel(-1, GOOD_FROG, 0); 
+				extraScore = 2; collision = true; }
 			else if ((sprites[i]->getNumber() % 2) == 1)
 			{
-				Mix_PlayChannel(-1, BAD_FROG, 0); extraScore = 0; collision = true;
+				//Mix_PlayChannel(-1, BAD_FROG, 0); 
+				extraScore = 0; collision = true;
 			}
 			delete objects[i];
 			delete sprites[i];
@@ -88,8 +90,8 @@ void Squares::Clean()
 		delete sprites[i];
 		delete objects[i];
 	}
-	Mix_FreeChunk(GOOD_FROG);
-	Mix_FreeChunk(BAD_FROG);
+	/*Mix_FreeChunk(GOOD_FROG);
+	Mix_FreeChunk(BAD_FROG);*/
 }
 void Squares::setBorders(int x, int y) 
 {
@@ -102,21 +104,21 @@ void Squares::setMix(bool m)
 	audio = m;
 	if (m == false) 
 	{
-		Mix_VolumeChunk(GOOD_FROG, startVol);
-		Mix_VolumeChunk(BAD_FROG, startVol);
+		/*Mix_VolumeChunk(GOOD_FROG, startVol);
+		Mix_VolumeChunk(BAD_FROG, startVol);*/
 	}
 	else 
 	{
-		Mix_VolumeChunk(GOOD_FROG, 0);
-		Mix_VolumeChunk(BAD_FROG, 0);
+		/*Mix_VolumeChunk(GOOD_FROG, 0);
+		Mix_VolumeChunk(BAD_FROG, 0);*/
 	}
 }
 void Squares::setMix(int vol) 
 {
 	if (startVol + vol > 128) return;
 	if (startVol + vol < 0) return;
-	Mix_VolumeChunk(GOOD_FROG, startVol + vol);
-	Mix_VolumeChunk(BAD_FROG, startVol + vol);
+	/*Mix_VolumeChunk(GOOD_FROG, startVol + vol);
+	Mix_VolumeChunk(BAD_FROG, startVol + vol);*/
 }
 bool Squares::getCollision() 
 {

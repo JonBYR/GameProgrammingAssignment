@@ -27,7 +27,7 @@ private:
 	SDL_Surface* surface;
 	SDL_Texture* texture;
 	char logMessage[32];
-	Mix_Chunk* SOUND_jump = NULL;
+	//Mix_Chunk* SOUND_jump = NULL;
 	int startVol;
 	bool flip;
 };

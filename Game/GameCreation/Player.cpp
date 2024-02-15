@@ -16,7 +16,7 @@ void Player::Init(int x, int y, int w, int h, int R, int G, int B)
 	velVec.setY(0);
 	LogTime::getTime(logMessage, 32);
 	startVol = 128;
-	if (Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096) == -1)
+	/*if (Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096) == -1)
 	{
 		printf("Warning: Audio has not been found! \n");
 		SDL_Quit();
@@ -24,7 +24,7 @@ void Player::Init(int x, int y, int w, int h, int R, int G, int B)
 	else
 	{
 		SOUND_jump = Mix_LoadWAV("./content/PlayerJump.wav");
-	}
+	}*/
 	flip = false;
 }
 bool Player::isKeyDown(SDL_Scancode key) //checks that the type of input pressed on the keyboard is either true or false 
@@ -65,7 +65,7 @@ void Player::Input()
 	if (isKeyDown(SDL_SCANCODE_SPACE)) 
 	{
 		jump = true;
-		Mix_PlayChannel(-1, SOUND_jump, 0);
+		//Mix_PlayChannel(-1, SOUND_jump, 0);
 		SDL_Log("[%s] [PLAYER SPACE] [%i]", logMessage, SDL_GetTicks());
 		LogTime::write("PLAYER SPACE", SDL_GetTicks(), logMessage);
 	}
@@ -132,18 +132,18 @@ SDL_Rect Player::getRect()
 }
 void Player::Clean() 
 {
-	Mix_FreeChunk(SOUND_jump);
+	//Mix_FreeChunk(SOUND_jump);
 }
 void Player::SetMix(bool m) 
 {
-	if (m == false) Mix_VolumeChunk(SOUND_jump, startVol);
-	else Mix_VolumeChunk(SOUND_jump, 0);
+	/*if (m == false) Mix_VolumeChunk(SOUND_jump, startVol);
+	else Mix_VolumeChunk(SOUND_jump, 0);*/
 }
 void Player::SetMix(int vol) 
 {
 	if (startVol + vol > 128) return;
 	if (startVol + vol < 0) return;
-	Mix_VolumeChunk(SOUND_jump, startVol + vol);
+	//Mix_VolumeChunk(SOUND_jump, startVol + vol);
 }
 bool Player::getFlip() 
 {

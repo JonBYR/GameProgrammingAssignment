@@ -1,1 +1,26 @@
-﻿  GameCreation.vcxproj -> C:\Users\Computing\source\repos\Game\GameCreation\Debug\GameCreation.exe
+﻿  Collision.cpp
+  Enemy.cpp
+C:\Users\Computing\Documents\GitHub\GameProgrammingAssignment\Game\GameCreation\Enemy.cpp(44,27): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Computing\Documents\GitHub\GameProgrammingAssignment\Game\GameCreation\Enemy.cpp(45,27): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  GameCreation.cpp
+C:\Users\Computing\Documents\GitHub\GameProgrammingAssignment\Game\GameCreation\GameCreation.cpp(19,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  GameObject.cpp
+  GameWorld.cpp
+  LogTime.cpp
+  Player.cpp
+C:\Users\Computing\Documents\GitHub\GameProgrammingAssignment\Game\GameCreation\Player.cpp(82,28): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Computing\Documents\GitHub\GameProgrammingAssignment\Game\GameCreation\Player.cpp(83,28): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  SimpleSprite.cpp
+  Squares.cpp
+C:\Users\Computing\Documents\GitHub\GameProgrammingAssignment\Game\GameCreation\Squares.cpp(15,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Computing\Documents\GitHub\GameProgrammingAssignment\Game\GameCreation\Squares.cpp(16,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Computing\Documents\GitHub\GameProgrammingAssignment\Game\GameCreation\Squares.cpp(45,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Computing\Documents\GitHub\GameProgrammingAssignment\Game\GameCreation\Squares.cpp(56,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Computing\Documents\GitHub\GameProgrammingAssignment\Game\GameCreation\Squares.cpp(88,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Computing\Documents\GitHub\GameProgrammingAssignment\Game\GameCreation\Squares.cpp(100,20): warning C4018: '<': signed/unsigned mismatch
+  Timer.cpp
+  Vector2D.cpp
+  Generating Code...
+C:\Users\Computing\Documents\GitHub\GameProgrammingAssignment\Game\GameCreation\Player.cpp(37): warning C4715: 'Player::isKeyDown': not all control paths return a value
+C:\Users\Computing\Documents\GitHub\GameProgrammingAssignment\Game\GameCreation\GameWorld.cpp(27): warning C4715: 'GameWorld::isKeyDown': not all control paths return a value
+  GameCreation.vcxproj -> C:\Users\Computing\Documents\GitHub\GameProgrammingAssignment\Game\GameCreation\Debug\GameCreation.exe

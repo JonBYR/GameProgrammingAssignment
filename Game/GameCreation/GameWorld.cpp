@@ -63,7 +63,7 @@ void GameWorld::Init(const char* name, int x, int y, int width, int height, int 
 	splash = true;
 	mute = false;
 	timerExtended = false;
-	if (Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096) == -1)
+	/*if (Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096) == -1)
 	{
 		printf("Warning: Audio has not been found! \n");
 		SDL_Quit();
@@ -73,7 +73,7 @@ void GameWorld::Init(const char* name, int x, int y, int width, int height, int 
 		backingMusic = Mix_LoadMUS("./content/Fluffing-a-Duck.mp3");
 		Mix_VolumeMusic(volume);
 		Mix_PlayMusic(backingMusic, -1);
-	}
+	}*/
 	number = 0;
 	sPressed = false;
 }
@@ -167,7 +167,7 @@ void GameWorld::Input()
 	{
 		if (mute == false) 
 		{
-			Mix_PauseMusic();
+			//Mix_PauseMusic();
 			player->SetMix(true);
 			sqr.setMix(true);
 			mute = true;
@@ -176,7 +176,7 @@ void GameWorld::Input()
 		}
 		else 
 		{
-			Mix_ResumeMusic();
+			//Mix_ResumeMusic();
 			player->SetMix(false);
 			sqr.setMix(false);
 			mute = false;
@@ -188,8 +188,8 @@ void GameWorld::Input()
 	{
 		uPressed = true;
 		volume = volume - 10;
-		Mix_VolumeMusic(volume);
-		Mix_Volume(-1, volume);
+		//Mix_VolumeMusic(volume);
+		//Mix_Volume(-1, volume);
 		player->SetMix(-10);
 		sqr.setMix(-10);
 		SDL_Log("[%s] [GAME VOLUME DECREASED] [%i]", logMessage, SDL_GetTicks());
@@ -199,8 +199,8 @@ void GameWorld::Input()
 	{
 		dPressed = true;
 		volume = volume + 10;
-		Mix_VolumeMusic(volume);
-		Mix_Volume(-1, volume);
+		//Mix_VolumeMusic(volume);
+		//Mix_Volume(-1, volume);
 		player->SetMix(10);
 		sqr.setMix(10);
 		SDL_Log("[%s] [GAME VOLUME INCREASED] [%i]", logMessage, SDL_GetTicks());
@@ -278,7 +278,7 @@ void GameWorld::Clean()
 	SDL_DestroyWindow(gameWindow);
 	SDL_DestroyRenderer(gameRenderer);
 	player->Clean();
-	Mix_CloseAudio();
+	//Mix_CloseAudio();
 	IMG_Quit();
 	SDL_Quit();
 	delete player;

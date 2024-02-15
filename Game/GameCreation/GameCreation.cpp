@@ -4,7 +4,7 @@
 #include <iostream>
 #include <SDL.h>
 #include "SDL_image.h"
-#include "SDL_mixer.h"
+//#include "SDL_mixer.h"
 #include "GameWorld.h"
 #include "SDL_ttf.h"
 #include "LogTime.h"
@@ -23,6 +23,10 @@ int main(int argc, char* args[])
     IMG_Init(SDL_INIT_EVERYTHING); //makes SDL_Image initialised
     if (SDL_Init(SDL_INIT_AUDIO) == -1) SDL_Quit();
     if (TTF_Init() == 1) SDL_Quit();
+    if (SDL_Init(SDL_INIT_AUDIO) < 0)
+        return -1;
+    //Mix_Init(MIX_INIT_WAVPACK | MIX_INIT_MP3);
+    
     gGame = new GameWorld(); //create a dynamic gameworld object
     LogTime::open();
     gGame->Init("Jonathan Byrne-ID:BYR19702034-CGPM2015M Games Programming. Frog Collection", 100, 100, 800, 600, SDL_WINDOW_RESIZABLE); //assign the parameters to create the SDL_Window in the game world

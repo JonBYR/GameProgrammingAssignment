@@ -9,7 +9,7 @@
 #include "SimpleSprite.h"
 #include "LogTime.h"
 #include "Collision.h"
-#include "SDL_mixer.h"
+//#include "SDL_mixer.h"
 class Squares
 {
 public:
@@ -36,8 +36,8 @@ private:
 	int extraScore;
 	int wX;
 	int wY;
-	Mix_Chunk* GOOD_FROG;
-	Mix_Chunk* BAD_FROG;
+	//Mix_Chunk* GOOD_FROG;
+	//Mix_Chunk* BAD_FROG;
 	int startVol;
 	bool collision;
 	static bool audio;
